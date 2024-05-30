@@ -64,3 +64,5 @@ function calculateGradesAndAverage(student) {
     
     const result = calculateGradesAndAverage(student);
     console.log(result);
+
+    module.exports ={calculateGradesAndAverage};
