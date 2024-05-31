@@ -1,6 +1,6 @@
 // Function to calculate grades and average points
 function calculateGradesAndAverage(student) {
-  // Helper function to calculate grade based on score and grading table
+
   function calculateGrade(score, gradingTable) {
   if (score >= gradingTable.A) {
   return 'A';
@@ -15,18 +15,18 @@ function calculateGradesAndAverage(student) {
   }
   }
   
-  // Helper function to calculate average points
+  
   function calculateAveragePoints(scores) {
   const sum = Object.values(scores).reduce((acc, curr) => acc + curr, 0);
   return Math.floor(sum / 7);
   }
   
-  // Grading tables for different subjects
+  
   const mathGradingTable = { A: 70, B: 60, C: 50, pass: 40 };
   const reGradingTable = { A: 80, B: 70, C: 60, pass: 50 };
   const englishGradingTable = { A: 75, B: 65, C: 55, pass: 45 };
   
-  // Calculate grades for each subject
+  
   const grades = {
   name: student.name,
   math: calculateGrade(student.math, mathGradingTable),
@@ -38,7 +38,7 @@ function calculateGradesAndAverage(student) {
   comp: calculateGrade(student.comp, englishGradingTable),
   };
   
-  // Calculate average points
+  
   grades.avgPts = calculateAveragePoints({
   math: student.math,
   phy: student.phy,
